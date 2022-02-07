@@ -29,21 +29,23 @@ T set_intersection(T set1,T set2){
 }
 template<typename T>
 void print_array(T arr){
+    cout << "{ ";
     for(const auto& i: arr)
         cout << i << " ";
+    cout << "}";
     cout << endl;
 }
 int main(){
     unordered_set<string> mySet1 = {"bird", "dog", "cat"};
-    cout << "The set mySet1 :" << endl;
+    cout << "The set mySet1 : ";
     print_array<unordered_set<string>>(mySet1);
     unordered_set<string> mySet2 = {"rat", "dog", "ant"};
-    cout << "The set mySet2 :" << endl;
+    cout << "The set mySet2 : ";
     print_array<unordered_set<string>>(mySet2);
-    cout << "Union :" << endl;
+    cout << "Union :" ;
     print_array<unordered_set<string>>(set_union<unordered_set<string>>(mySet1,mySet2));
-    cout << "Intersection :" << endl;
+    cout << "Intersection : ";
     print_array<unordered_set<string>>(set_intersection<unordered_set<string>>(mySet1,mySet2));
-    cout << "Difference :" << endl;
+    cout << "Difference : ";
     print_array<unordered_set<string>>(set_difference<unordered_set<string>>(mySet1,mySet2));
 }
