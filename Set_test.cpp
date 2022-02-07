@@ -35,10 +35,15 @@ void print_array(T arr){
 }
 int main(){
     unordered_set<string> mySet1 = {"bird", "dog", "cat"};
+    cout << "The set mySet1 is ";
     print_array<unordered_set<string>>(mySet1);
     unordered_set<string> mySet2 = {"rat", "dog", "ant"};
+    cout << "The set mySet2 is ";
     print_array<unordered_set<string>>(mySet2);
+    cout << "Union is ";
     print_array<unordered_set<string>>(set_union<unordered_set<string>>(mySet1,mySet2));
+    cout << "Intersection mySet1 is ";
     print_array<unordered_set<string>>(set_intersection<unordered_set<string>>(mySet1,mySet2));
+    cout << "Difference mySet1 is ";
     print_array<unordered_set<string>>(set_difference<unordered_set<string>>(mySet1,mySet2));
 }
